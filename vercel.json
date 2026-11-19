@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "",
+  "installCommand": "npm ci",
+  "outputDirectory": ".",
+  "functions": {
+    "api/reminders.js": { "maxDuration": 60 }
+  },
+  "crons": [
+    { "path": "/api/reminders?cron=1", "schedule": "0 8 * * *" }
+  ]
+}
